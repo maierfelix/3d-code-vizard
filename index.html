@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="//esironal.github.io/cmtouch/lib/codemirror.css">
+<script src="//esironal.github.io/cmtouch/lib/codemirror.js"></script>
+<script src="//codemirror.net/mode/javascript/javascript.js"></script>
+
+<canvas id="scene"></canvas>
+
+<button id="edit" class="btn-1">Edit Code</button>
+<div class="overlay" id="code_editor">
+  <button id="analyse" class="btn-2">Analyse</button>
+  <div id="input"></div>
+</div>
+
+<script src="gl-matrix-min.js"></script>
+<script src="iroh-browser.js"></script>
+<script src="rokon.js"></script>
+<script src="renderer.js"></script>
+<script src="index.js"></script>
+<script src="edit.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+  canvas {
+    margin: 0;
+    padding: 0;
+  }
+  .btn-1, .btn-2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+    color: rgb(255,255,255);
+    padding: 4px;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 4px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .btn-2 {
+    z-index: 99999;
+    bottom: 0px;
+    top: auto;
+    margin-bottom: 4px;
+    background: rgba(0,0,0,0.5);
+  }
+  .overlay {
+    display: none;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: rgba(255,255,255,0.25);
+  }
+  .cm-s-default {
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255,0.875);
+  }
+</style>
