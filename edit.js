@@ -3,6 +3,11 @@ edit.onclick = (e) => {
   edit.style.display = "none";
 };
 
+exit.onclick = (e) => {
+  code_editor.style.display = "none";
+  edit.style.display = "block";
+};
+
 analyse.onclick = (e) => {
   localStorage.setItem("code", doc.getValue());
   location.reload();
